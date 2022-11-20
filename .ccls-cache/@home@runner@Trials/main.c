@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 //
-int main(){
-  int i, M[30], s=0,m=3;
-  for(i=0;i<30;i++){
-    M[i]=m;
-    m+=3;
-    s=s+M[i];
-    printf("%d\t",M[i]);
-  }
-  printf("\nLa suma es: %d",s);
-  return 0;
+int main ( )
+{
+int i=10, *i_ptr;
+// Inicialización del apuntador
+printf("\n Acceso directo, var= %d", i);
+printf("\n Acceso indirecto, var= %d", *i_ptr); /*Se despliega la dirección de la
+variable de dos maneras*/
+printf("\n La dirección de var= %d", &i);
+printf("\n LA dirección de var= %d", *i_ptr);
+return 0;
 }
