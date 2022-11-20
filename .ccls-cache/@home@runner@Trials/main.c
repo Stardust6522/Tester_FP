@@ -3,22 +3,16 @@
 //
 int main(){
   int i,j;
-  float M[2][2], s=0;
-  printf("<<<<<  MATRIZ 2x2  >>>>>\n\n");
-  for(i=0;i<2;i++){
-    for(j=0;j<=1;j++){
-    printf("(• Teclear el elemento |%d %d| 5 •)",i+1,j+1);
-    scanf("%f",&M[i][j]);
-      s+=M[i][j];
-    }
+  char M[6];
+  M[0]='M';
+  M[1]='a';
+  M[2]='r';
+  M[3]='c';
+  M[4]='o';
+  M[5]='s';
+  printf("\n<<<<<  MI NOMBRE ES  >>>>>\n\n\t\t  ");
+  for(i=0;i<6;i++){
+    printf("%c",M[i]);
   }
-  printf("\n \t La MATRIZ es:\n\n");
-  for(i=0;i<2;i++){
-    for(j=0;j<=1;j++){
-    printf("\t%.1f",M[i][j]);
-    }
-  printf("\t\n");
-  }
-  printf("\t\n La suma de los elementos  es: %.2f",s);
   return 0;
 }
