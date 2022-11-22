@@ -2,60 +2,19 @@
 #include <stdlib.h>
 //
 int main(){
-	int Ans;
-	float L1, L2, Res;
-  do{
-	printf("\n<<<<  Poligonos  >>>>>\n\n | Seleccione entre las diferentes figuras |\n\t 1) Cuadrado\n\t 2) Rectangulo\n\t 3) Triangulo\n\t 4) Mensaje secreto 🤫\n\n");
-	printf(">>> 0) Salir\n\n •)");
-	scanf("%d",&Ans);
-    if(Ans!=4){
-      printf("\n Quizá deberías leer el mensaje secreto 🤭\n");
-    }
-	switch(Ans){
-	case 1: {
-	printf("\n )Ingrese el tamaño del lado: ");
-	scanf("%f",&L1);
-	Res=(4*L1);
-	printf("\n El perímetro es: %.4f",Res);
-	Res=(L1*L1);
-	printf("\n El área es: %.4f\n",Res);
-	break;
-	}
-	case 2: {
-	printf("\n )Ingrese el tamaño del largo: ");
-	scanf("%f",&L1);
-	printf("\n )Ingrese el tamaño del ancho: ");
-	scanf("%f",&L2);
-	Res=(2*(L1+L2));
-	printf("\n El perímetro es: %.4f",Res);
-	Res=(L1*L2);
-	printf("\n El área es: %.4f\n",Res);
-	break;
-	}
-	case 3: {
-	printf("\n )Ingrese el tamaño de la base: ");
-	scanf("%f",&L1);
-	printf("\n )Ingrese el tamaño de la altura: ");
-	scanf("%f",&L2);
-	Res=((L1*L2)/2);
-	printf("\n El área es: %.4f\n",Res);
-	break;
-	}
-  case 4: {
-  printf("\n Curiosilla!, te quiero mucho 🥰❤️  737");
-    Ans=0;
-    
+  int Res, n, i, Ans;
+  do {
+  printf("\n<<<<<  Cuenta regresiva  >>>>>\n\n Ingresa el número desde el cual\n comenzará la cuenta regresiva: ");
+  scanf("%d",&n);
+  printf("\n");
+  for(i=0;i<n;i++){
+    Res=(n-i);
+    printf("\t%d \n",Res);
   }
-	case 0: {
-	printf("\n Nos vemos luego 😊\n\n");
-	break;
-	}
-  default: {
-	printf("\t oops! 😳 Intentalo de nuevo 😊 \n");
-	break;
-	}
+  printf("\n✨✨✨ Feliz Año nuevo!! ✨✨✨\n\n");
+  printf("\tContamos de nuevo?\n\n 1)Sí!\n 2)Mejor luego\n\n\t •)");
+  scanf("%d",&Ans);
   }
-  }
-	while(Ans!=0);
+  while(Ans!=2);
   return 0;
 	}
