@@ -2,23 +2,60 @@
 #include <stdlib.h>
 //
 int main(){
-  int i,j;
-  float M[2][2], s=0;
-  printf("<<<<<  MATRIZ 2x2  >>>>>\n\n");
-  for(i=0;i<2;i++){
-    for(j=0;j<=1;j++){
-    printf("(• Teclear el elemento |%d %d| 5 •)",i+1,j+1);
-    scanf("%f",&M[i][j]);
-      s+=M[i][j];
+	int Ans;
+	float L1, L2, Res;
+  do{
+	printf("\n<<<<  Poligonos  >>>>>\n\n | Seleccione entre las diferentes figuras |\n\t 1) Cuadrado\n\t 2) Rectangulo\n\t 3) Triangulo\n\t 4) Mensaje secreto 🤫\n\n");
+	printf(">>> 0) Salir\n\n •)");
+	scanf("%d",&Ans);
+    if(Ans!=4){
+      printf("\n Quizá deberías leer el mensaje secreto 🤭\n");
     }
+	switch(Ans){
+	case 1: {
+	printf("\n )Ingrese el tamaño del lado: ");
+	scanf("%f",&L1);
+	Res=(4*L1);
+	printf("\n El perímetro es: %.4f",Res);
+	Res=(L1*L1);
+	printf("\n El área es: %.4f\n",Res);
+	break;
+	}
+	case 2: {
+	printf("\n )Ingrese el tamaño del largo: ");
+	scanf("%f",&L1);
+	printf("\n )Ingrese el tamaño del ancho: ");
+	scanf("%f",&L2);
+	Res=(2*(L1+L2));
+	printf("\n El perímetro es: %.4f",Res);
+	Res=(L1*L2);
+	printf("\n El área es: %.4f\n",Res);
+	break;
+	}
+	case 3: {
+	printf("\n )Ingrese el tamaño de la base: ");
+	scanf("%f",&L1);
+	printf("\n )Ingrese el tamaño de la altura: ");
+	scanf("%f",&L2);
+	Res=((L1*L2)/2);
+	printf("\n El área es: %.4f\n",Res);
+	break;
+	}
+  case 4: {
+  printf("\n Curiosilla!, te quiero mucho 🥰❤️  737");
+    Ans=0;
+    
   }
-  printf("\n \t La MATRIZ es:\n\n");
-  for(i=0;i<2;i++){
-    for(j=0;j<=1;j++){
-    printf("\t%.1f",M[i][j]);
-    }
-  printf("\t\n");
+	case 0: {
+	printf("\n Nos vemos luego 😊\n\n");
+	break;
+	}
+  default: {
+	printf("\t oops! 😳 Intentalo de nuevo 😊 \n");
+	break;
+	}
   }
-  printf("\t\n La suma de los elementos  es: %.2f",s);
+  }
+	while(Ans!=0);
   return 0;
-}
+	}
