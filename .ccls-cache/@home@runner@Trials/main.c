@@ -2,17 +2,19 @@
 #include <stdlib.h>
 //
 int main(){
-  int Res, n, i, Ans;
+  float Res, n;
+  int Ans,i,j;
   do {
-  printf("\n<<<<<  Cuenta regresiva  >>>>>\n\n Ingresa el número desde el cual\n comenzará la cuenta regresiva: ");
-  scanf("%d",&n);
-  printf("\n");
-  for(i=0;i<n;i++){
-    Res=(n-i);
-    printf("\t%d \n",Res);
+  printf("\n<<<<<  TABLAS DE MULTIPLICAR  >>>>>\n\n Mostrar tabla del: ");
+  scanf("%f",&n);
+  printf("\n desde 1 hasta el valor: ");
+  scanf("%d",&i);
+  printf("\n| Tabla del %.2f\n|\n",n);
+  for(j=1;j<=i;j++){
+    Res=(n*j);
+    printf("|\t%.2f \n",Res);
   }
-  printf("\n✨✨✨ Feliz Año nuevo!! ✨✨✨\n\n");
-  printf("\tContamos de nuevo?\n\n 1)Sí!\n 2)Mejor luego\n\n\t •)");
+  printf("\n\tProbar otra tabla?\n\n 1)Sí!\n 2)Mejor luego\n\n\t •)");
   scanf("%d",&Ans);
   }
   while(Ans!=2);
