@@ -1,7 +1,7 @@
 //
 #include <stdio.h>
 //
-char meses[12][3] = {"Ene","Feb","Mar","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"};
+char meses[12][3] = {"Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"};
 int i=0, j=0, dia, mes, año;
 //
 int main() {
