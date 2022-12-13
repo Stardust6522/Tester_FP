@@ -1,38 +1,48 @@
-//
-#include <stdio.h>
-//
-char meses[12][3] = {"Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"};
-int i=0, j=0, dia, mes, año;
-//
-int main() {
-  printf("\ningrese una fecha corta: ");
-  scanf("%d %d %d",&dia,&mes,&año);
-  if(año<=0){
-    printf("\naño no válido");
-    return 0;
-  }
-  else if (mes<=0 || mes>12){
-    printf("\nmes no válido");
-    return 0;
-  }
-  if (mes==2){
-    if (dia<0 || dia>28){
-      printf("\ndía no válido");
-      return 0;
-      }
+//Librerías
+#include "stdio.h"
+#include "stdlib.h"
+//Global VAR's
+int n,j,k;
+//DEV FN
+int fnBody(){
+  for(k=0;k<=n;k++){
+    for(j=0;j<=n-k;j++){
+      printf(" ");
     }
-  else if (mes==11 || mes==9 || mes==7 || mes==6 || mes==4){
-    if (dia<0 || dia>30){
-      printf("\ndía no válido");
-      return 0;
-      }
+    printf("*");
+    for(j=0;j<=(2*k);j++){
+      printf(" ");
     }
-  else{
-    if(dia<0||dia>31){
-      printf("\ndía no válido");
-      return 0;
-    }
+    printf("*");
+    printf("\n");
   }
-  printf("\n\tLa fecha es:\n%d de %c%c%c de %d",dia,meses[mes-1][0],meses[mes-1][1],meses[mes-1][2],año);
+}
+int fnBase(){
+  printf("*");
+    for(k=0;k<=n+1;k++){
+      printf(" ");
+      printf("*");
+    }
+    printf("\n");
+}
+int fnHeight (){
+  printf("Dame la altura: ");
+  scanf("%d",&n);
+  printf("\n");
+}
+//MAIN
+int main (){
+  fnHeight();
+  if(n>=0){
+    for(k=0;k<=n+1;k++){
+     printf(" ");
+    }
+    printf("*");
+    printf("\n");
+  }
+  fnBody();
+  if(n>=1){
+    fnBase();
+  }
   return 0;
 }
